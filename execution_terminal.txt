@@ -1,0 +1,20 @@
+sudo pip install --user numpy scipy dlib
+pip install imutils
+pip install face_recognition
+pip install dlib
+cmake
+git clone httphttps://github.com/davisking/dlib.git
+cmake .. -DUSE_AVX_INSTRUCTIONS=1
+sudo "/Applications/CMake.app/Contents/bin/cmake-gui" --install
+pip install face_recognition
+cd build
+cmake .. -DUSE_AVX_INSTRUCTIONS=1
+python setup.py install --yes USE_AVX_INSTRUCTIONS
+pip install opencv-python
+
+
+
+
+python recognize_faces_video.py --encodings encodings.pickle --output output/example10.avi
+python recognize_faces_image.py --encodings encodings.pickle --image examples/example03.png
+python encode_faces.py --dataset dataset --encodings encodings.pickle
